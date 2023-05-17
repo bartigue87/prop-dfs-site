@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 80px;
+  background-color: rgb(94, 175, 163);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.left--header {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  gap: 30px;
+}
+
+.left--header h3 {
+  font-size: 30px;
+}
+
+.left--header p {
+  font-size: 18px;
+}
+
+.right--header {
+  display: flex;
+  gap: 20px;
+}
+
+header button {
+  width: 123px;
+  height: 48px;
+  font-size: 16px;
+  color: #ffffff;
+  border: #022959 1px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #022959;
+}
