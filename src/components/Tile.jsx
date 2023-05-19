@@ -7,7 +7,7 @@ export default function Tile(props) {
       <label htmlFor={props.player}>
         <i className="fas fa-basketball-ball" style={{ color: "#f07a19" }}></i>
         <h6>{props.player}</h6>
-        <h>{props.team}</h>
+        <h5>{props.team}</h5>
         <div className="projection">
           <p>{props.projection}</p> | <p>{props.category}</p>
         </div>
