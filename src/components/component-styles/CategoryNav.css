@@ -1,0 +1,30 @@
+.category--label {
+  display: block;
+  position: relative;
+}
+
+.category--tile {
+  position: relative;
+}
+
+.category--input[type="radio"] {
+  -webkit-appearance: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+.category--input[type="radio"]:after {
+  content: "";
+}
+
+.category--input[type="radio"]:hover {
+  transform: scale(1.04);
+  border-bottom: 5px solid rgb(28, 192, 246);
+}
+
+.category--input[type="radio"]:checked {
+  border-bottom: 5px solid rgb(28, 192, 246);
+}

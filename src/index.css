@@ -18,3 +18,12 @@ section {
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.category--container {
+  display: flex;
+  width: 100%;
+  top: 90px;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+}
