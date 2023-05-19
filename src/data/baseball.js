@@ -136,3 +136,5 @@ const baseballPlayers = [
     earned_runs_allowed_projections: 2.5,
   },
 ];
+
+export default baseballPlayers;

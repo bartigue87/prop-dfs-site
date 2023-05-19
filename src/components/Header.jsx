@@ -1,4 +1,3 @@
-import SportNavbar from "./SportNavbar";
 import "./component-styles/Header.css";
 
 export default function Header() {
@@ -15,7 +14,6 @@ export default function Header() {
           <button>Sign Up</button>
         </div>
       </header>
-      <SportNavbar />
     </>
   );
 }

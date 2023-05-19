@@ -1,4 +1,4 @@
-const footballPlayers = [
+const quarterBacks = [
   {
     name: "Patrick Mahomes",
     sport: "Football",
@@ -76,6 +76,9 @@ const footballPlayers = [
     pass_td_projections: 1.5,
     team: "New York Giants",
   },
+];
+
+const wideReceivers = [
   {
     name: "DeAndre Hopkins",
     sport: "Football",
@@ -212,6 +215,8 @@ const footballPlayers = [
     receiving_yard_projections: 75.5,
     target_projections: 8.5,
   },
+];
+const runningBacks = [
   {
     name: "Christian McCaffrey",
     sport: "Football",
@@ -309,3 +314,5 @@ const footballPlayers = [
     receptions_projections: 2.5,
   },
 ];
+
+export { quarterBacks, wideReceivers, runningBacks };

@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { PageContext } from "../App";
+import { categoryContext } from "./Form";
 import "./component-styles/SportNav.css";
 
 export default function SportNavbar() {
   const [page, setPage] = useContext(PageContext);
+  const [category, setCategory] = useContext(categoryContext);
   const [formData, setFormData] = useState({
     sport: "football",
   });
@@ -14,18 +16,20 @@ export default function SportNavbar() {
     handleClick(event.target.value);
   };
 
-  console.log(page);
   const handleClick = (sport) => {
     if (sport === "football") {
       setPage(0);
+      setCategory("Pass Yards");
     } else if (sport === "basketball") {
       setPage(1);
+      setCategory("Points");
     } else if (sport === "baseball") {
       setPage(2);
     } else if (sport === "hockey") {
       setPage(3);
     }
   };
+  console.log(category);
   return (
     <nav className="nav--container">
       <div className="nav--tile">

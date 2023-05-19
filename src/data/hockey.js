@@ -166,3 +166,5 @@ const hockeyPlayers = [
     shots_on_goal_projections: 3.5,
   },
 ];
+
+export default hockeyPlayers;

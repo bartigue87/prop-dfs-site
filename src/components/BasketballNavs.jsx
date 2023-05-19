@@ -6,7 +6,6 @@ export default function BasketballNavs(props) {
       <CategoryNav
         category={"Points"}
         value={"Points"}
-        isChecked={true}
         formData={props.formData}
         setFormData={props.setFormData}
         name={"category"}

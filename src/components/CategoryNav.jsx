@@ -4,6 +4,7 @@ import "./component-styles/CategoryNav.css";
 
 export default function CategoryNav(props) {
   const [category, setCategory] = useContext(categoryContext);
+  console.log(category);
 
   const handleRadio = (event) => {
     props.setFormData({
@@ -20,7 +21,6 @@ export default function CategoryNav(props) {
     handleClick;
   }, []);
 
-  console.log(category);
   return (
     <div className="category--tile">
       <label className="category--label" htmlFor={props.category}>
@@ -33,7 +33,7 @@ export default function CategoryNav(props) {
         name={props.name}
         id={props.category}
         onChange={handleRadio}
-        checked={props.formData.category === props.category}
+        checked={category === props.category}
         onClick={handleClick}
       />
     </div>

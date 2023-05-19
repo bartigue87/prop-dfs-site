@@ -37,7 +37,7 @@ const basketballPlayers = [
     point_projections: 24.5,
     rebound_projections: 6.5,
     assist_projections: 4.5,
-    team: "LA Clippers",
+    team: "Los Angeles Clippers",
   },
   {
     name: "James Harden",
@@ -149,7 +149,7 @@ const basketballPlayers = [
     point_projections: 25.5,
     rebound_projections: 4.5,
     assist_projections: 5.5,
-    team: "Utah Jazz",
+    team: "Cleveland Cavaliers",
   },
   {
     name: "Russell Westbrook",
@@ -157,7 +157,7 @@ const basketballPlayers = [
     point_projections: 22.5,
     rebound_projections: 8.5,
     assist_projections: 12.5,
-    team: "Los Angeles Lakers",
+    team: "Los Angeles Clippers",
   },
   {
     name: "Chris Paul",
@@ -198,14 +198,6 @@ const basketballPlayers = [
     rebound_projections: 9.5,
     assist_projections: 5.5,
     team: "Miami Heat",
-  },
-  {
-    name: "Ben Simmons",
-    sport: "Basketball",
-    point_projections: 15.5,
-    rebound_projections: 6.5,
-    assist_projections: 8.5,
-    team: "Philadelphia 76ers",
   },
   {
     name: "Jaylen Brown",
