@@ -25,6 +25,7 @@ export default function SportNavbar() {
       setCategory("Points");
     } else if (sport === "baseball") {
       setPage(2);
+      setCategory("Strikeouts");
     } else if (sport === "hockey") {
       setPage(3);
     }
