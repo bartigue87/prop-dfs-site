@@ -15,7 +15,7 @@ export default function BasketballPlayers(props) {
         team={data.team}
         category={"Points"}
         icon={"fa-basketball-ball"}
-        iconColor={"#F88158"}
+        iconColor={"#ee6730"}
         projection={data.point_projections}
       />
     );
@@ -28,7 +28,7 @@ export default function BasketballPlayers(props) {
         team={data.team}
         category={"Rebounds"}
         icon={"fa-basketball-ball"}
-        iconColor={"#F88158"}
+        iconColor={"#ee6730"}
         projection={data.rebound_projections}
       />
     );
@@ -42,7 +42,7 @@ export default function BasketballPlayers(props) {
         team={data.team}
         category={"Assists"}
         icon={"fa-basketball-ball"}
-        iconColor={"#F88158"}
+        iconColor={"#ee6730"}
         projection={data.assist_projections}
       />
     );
