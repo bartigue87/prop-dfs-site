@@ -22,9 +22,9 @@
 
 .category--input[type="radio"]:hover {
   transform: scale(1.04);
-  border-bottom: 5px solid rgb(28, 192, 246);
+  border-bottom: 5px solid #e0ca46;
 }
 
 .category--input[type="radio"]:checked {
-  border-bottom: 5px solid rgb(28, 192, 246);
+  border-bottom: 5px solid #e0ca46;
 }

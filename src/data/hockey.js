@@ -1,4 +1,4 @@
-const hockeyPlayers = [
+const goalies = [
   {
     name: "Andrei Vasilevskiy",
     sport: "Hockey",
@@ -69,6 +69,8 @@ const hockeyPlayers = [
     saves_projections: 26.5,
     goals_allowed_projections: 2.5,
   },
+];
+const skillsPlayers = [
   {
     name: "Nathan MacKinnon",
     team: "Colorado Avalanche",
@@ -167,4 +169,4 @@ const hockeyPlayers = [
   },
 ];
 
-export default hockeyPlayers;
+export { goalies, skillsPlayers };

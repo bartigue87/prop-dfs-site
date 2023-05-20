@@ -4,17 +4,18 @@ header {
   top: 0;
   z-index: 1;
   height: 80px;
-  background-color: rgb(94, 175, 163);
+  background-color: #ebc515;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 25px;
+  color: black;
 }
 
 .left--header {
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 500px;
   gap: 30px;
 }
 
@@ -36,8 +37,8 @@ header button {
   height: 48px;
   font-size: 16px;
   color: #ffffff;
-  border: #022959 1px solid;
+  border: #282a27 1px solid;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #022959;
+  background-color: #282a27;
 }

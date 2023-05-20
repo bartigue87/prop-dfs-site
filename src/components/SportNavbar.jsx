@@ -28,6 +28,7 @@ export default function SportNavbar() {
       setCategory("Strikeouts");
     } else if (sport === "hockey") {
       setPage(3);
+      setCategory("Saves");
     }
   };
   console.log(category);

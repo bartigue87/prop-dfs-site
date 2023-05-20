@@ -7,6 +7,8 @@ import FootballNavs from "./FootballNavs";
 import SportNavbar from "./SportNavbar";
 import BaseballNavs from "./BaseballNavs";
 import BaseballPlayers from "../pages/BaseballPlayers";
+import HockeyNavs from "./HockeyNavs";
+import HockeyPlayers from "../pages/HockeyPlayers";
 
 export const categoryContext = createContext();
 
@@ -38,6 +40,13 @@ export default function Form() {
         <>
           <BaseballNavs formData={formData} setFormData={setFormData} />
           <BaseballPlayers />
+        </>
+      );
+    } else if (page === 3) {
+      return (
+        <>
+          <HockeyNavs formData={formData} setFormData={setFormData} />
+          <HockeyPlayers />
         </>
       );
     }

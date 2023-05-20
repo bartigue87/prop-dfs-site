@@ -14,6 +14,8 @@ export default function BaseballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Strikeouts"}
+        icon={"fa-baseball-ball"}
+        iconColor={"#ff3636"}
         projection={data.strikeout_projections}
       />
     );
@@ -25,6 +27,8 @@ export default function BaseballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Pitching Outs"}
+        icon={"fa-baseball-ball"}
+        iconColor={"#ff3636"}
         projection={data.pitching_outs_projections}
       />
     );
@@ -37,6 +41,8 @@ export default function BaseballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Earned Runs Allowed"}
+        icon={"fa-baseball-ball"}
+        iconColor={"#ff3636"}
         projection={data.earned_runs_allowed_projections}
       />
     );

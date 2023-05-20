@@ -14,6 +14,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Passing Yards"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.pass_yards_projections}
       />
     );
@@ -25,6 +27,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Passing TDs"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.pass_td_projections}
       />
     );
@@ -37,6 +41,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Receptions"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.receptions_projections}
       />
     );
@@ -48,6 +54,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Targets"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.target_projections}
       />
     );
@@ -59,6 +67,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Rec Yards"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.receiving_yard_projections}
       />
     );
@@ -70,6 +80,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Rush Yards"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.rushing_yards_projections}
       />
     );
@@ -81,6 +93,8 @@ export default function FootballPlayers(props) {
         player={data.name}
         team={data.team}
         category={"Rush Attempts"}
+        icon={"fa-football-ball"}
+        iconColor={"#825736"}
         projection={data.rushing_attempts_projections}
       />
     );

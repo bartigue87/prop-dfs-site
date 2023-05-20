@@ -5,7 +5,7 @@ export default function Header() {
     <>
       <header>
         <div className="left--header">
-          <h3>Bet Hive</h3>
+          <h3>Prop Hive</h3>
           <p>Board</p>
           <p>My Entries</p>
         </div>

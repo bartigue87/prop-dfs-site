@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: #f5f7ff;
+  background-color: #282a27;
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
 section {
@@ -17,6 +19,7 @@ section {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
+  color: black;
 }
 
 .category--container {
