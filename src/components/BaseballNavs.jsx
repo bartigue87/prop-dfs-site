@@ -18,7 +18,7 @@ export default function BaseballNavs(props) {
         name={"category"}
       />
       <CategoryNav
-        category={"Earned Runs Allowed"}
+        category={"ERA"}
         value={"Earned Runs Allowed"}
         formData={props.formData}
         setFormData={props.setFormData}

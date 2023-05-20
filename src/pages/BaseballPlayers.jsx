@@ -40,7 +40,7 @@ export default function BaseballPlayers(props) {
         key={data.name}
         player={data.name}
         team={data.team}
-        category={"Earned Runs Allowed"}
+        category={"ERA"}
         icon={"fa-baseball-ball"}
         iconColor={"#ff3636"}
         projection={data.earned_runs_allowed_projections}
@@ -55,7 +55,7 @@ export default function BaseballPlayers(props) {
       players = strikeouts;
     } else if (category === "Pitching Outs") {
       players = pitchingOuts;
-    } else if (category === "Earned Runs Allowed") {
+    } else if (category === "ERA") {
       players = earnedRuns;
     } else {
       players = strikeouts;

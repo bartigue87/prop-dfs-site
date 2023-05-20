@@ -4,7 +4,6 @@ import "./component-styles/CategoryNav.css";
 
 export default function CategoryNav(props) {
   const [category, setCategory] = useContext(categoryContext);
-  console.log(category);
 
   const handleRadio = (event) => {
     props.setFormData({

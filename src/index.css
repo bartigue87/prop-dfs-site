@@ -38,4 +38,10 @@ section {
     margin: 0 auto;
     gap: 10px;
   }
+
+  section {
+    width: 95%;
+    justify-content: center;
+    gap: 15px;
+  }
 }
