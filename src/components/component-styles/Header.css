@@ -42,3 +42,16 @@ header button {
   cursor: pointer;
   background-color: #282a27;
 }
+
+@media only screen and (max-width: 675px) {
+  .left--header h3 {
+    font-size: 26px;
+  }
+
+  .left--header p {
+    font-size: 16px;
+  }
+  header button {
+    display: none;
+  }
+}

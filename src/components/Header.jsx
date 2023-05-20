@@ -10,8 +10,8 @@ export default function Header() {
           <p>My Entries</p>
         </div>
         <div className="right--header">
-          <button>Login</button>
-          <button>Sign Up</button>
+          <button disabled>Login</button>
+          <button disabled>Sign Up</button>
         </div>
       </header>
     </>

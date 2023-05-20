@@ -1,6 +1,6 @@
 .tile {
   height: 240px;
-  width: 200px;
+  width: 220px;
   position: relative;
 }
 
@@ -66,4 +66,5 @@ label h6 {
 .projection {
   display: flex;
   gap: 10px;
+  font-size: 14px;
 }
