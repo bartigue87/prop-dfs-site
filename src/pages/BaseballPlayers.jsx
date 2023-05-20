@@ -5,7 +5,7 @@ import CategoryNav from "../components/CategoryNav";
 import { categoryContext } from "../components/Form";
 
 export default function BaseballPlayers(props) {
-  const [category, setCategory] = useContext(categoryContext);
+  const [formData, setFormData] = useContext(categoryContext);
 
   const strikeouts = baseballPlayers.map((data) => {
     return (
@@ -51,11 +51,11 @@ export default function BaseballPlayers(props) {
   let players;
 
   function displayPlayers() {
-    if (category === "Strikeouts") {
+    if (formData.category === "Strikeouts") {
       players = strikeouts;
-    } else if (category === "Pitching Outs") {
+    } else if (formData.category === "Pitching Outs") {
       players = pitchingOuts;
-    } else if (category === "ERA") {
+    } else if (formData.category === "ERA") {
       players = earnedRuns;
     } else {
       players = strikeouts;

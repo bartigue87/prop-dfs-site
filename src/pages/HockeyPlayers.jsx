@@ -5,7 +5,7 @@ import CategoryNav from "../components/CategoryNav";
 import { categoryContext } from "../components/Form";
 
 export default function HockeyPlayers(props) {
-  const [category, setCategory] = useContext(categoryContext);
+  const [formData, setFormData] = useContext(categoryContext);
 
   const saves = goalies.map((data) => {
     return (
@@ -51,11 +51,11 @@ export default function HockeyPlayers(props) {
   let players;
 
   function displayPlayers() {
-    if (category === "Saves") {
+    if (formData.category === "Saves") {
       players = saves;
-    } else if (category === "Goals Allowed") {
+    } else if (formData.category === "Goals Allowed") {
       players = goalsAllowed;
-    } else if (category === "Shots On Goal") {
+    } else if (formData.category === "Shots On Goal") {
       players = shotsOnGoal;
     } else {
       players = saves;

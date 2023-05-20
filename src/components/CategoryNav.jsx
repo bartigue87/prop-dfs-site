@@ -3,7 +3,7 @@ import { categoryContext } from "./Form";
 import "./component-styles/CategoryNav.css";
 
 export default function CategoryNav(props) {
-  const [category, setCategory] = useContext(categoryContext);
+  const [formData, setFormData] = useContext(categoryContext);
 
   const handleRadio = (event) => {
     props.setFormData({
@@ -13,7 +13,10 @@ export default function CategoryNav(props) {
   };
 
   function handleClick() {
-    setCategory(props.category);
+    setFormData({
+      ...formData,
+      category: props.category,
+    });
   }
 
   useEffect(() => {
@@ -32,7 +35,7 @@ export default function CategoryNav(props) {
         name={props.name}
         id={props.category}
         onChange={handleRadio}
-        checked={category === props.category}
+        checked={formData.category === props.category}
         onClick={handleClick}
       />
     </div>

@@ -14,38 +14,40 @@ export const categoryContext = createContext();
 
 export default function Form() {
   const [page, setPage] = useContext(PageContext);
-  const [category, setCategory] = useState("Pass Yards");
 
   const [formData, setFormData] = useState({
-    category: category,
+    betslipSize: 0,
+    category: "Pass Yards",
+    betslipCount: [false, false, false, false, false, false],
+    betslipBuild: [],
   });
 
   function PageDisplay() {
     if (page === 0) {
       return (
         <>
-          <FootballNavs formData={formData} setFormData={setFormData} />
+          <FootballNavs />
           <FootballPlayers />
         </>
       );
     } else if (page === 1) {
       return (
         <>
-          <BasketballNavs formData={formData} setFormData={setFormData} />
+          <BasketballNavs />
           <BasketballPlayers />
         </>
       );
     } else if (page === 2) {
       return (
         <>
-          <BaseballNavs formData={formData} setFormData={setFormData} />
+          <BaseballNavs />
           <BaseballPlayers />
         </>
       );
     } else if (page === 3) {
       return (
         <>
-          <HockeyNavs formData={formData} setFormData={setFormData} />
+          <HockeyNavs />
           <HockeyPlayers />
         </>
       );
@@ -53,7 +55,7 @@ export default function Form() {
   }
 
   return (
-    <categoryContext.Provider value={[category, setCategory]}>
+    <categoryContext.Provider value={[formData, setFormData]}>
       <SportNavbar />
       <div className="form--container">
         <div className="body--container">{PageDisplay()}</div>

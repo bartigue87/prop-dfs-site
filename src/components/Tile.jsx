@@ -1,10 +1,50 @@
+import { useContext } from "react";
 import "./component-styles/Tile.css";
+import { categoryContext } from "./Form";
 
 export default function Tile(props) {
+  const [formData, setFormData] = useContext(categoryContext);
+
+  const handleCheckbox = (event) => {
+    const playerPropDataSplit = event.target.value.split(",");
+    const playerProp = {
+      id: playerPropDataSplit[0],
+      name: playerPropDataSplit[1],
+      projection: playerPropDataSplit[2],
+    };
+    if (formData.betslipBuild.some((data) => data.id === event.target.id)) {
+      const index = formData.betslipBuild.findIndex(
+        (obj) => obj.id === event.target.id
+      );
+      setFormData({
+        ...formData,
+        betslipBuild: [
+          ...formData.betslipBuild.slice(0, index),
+          ...formData.betslipBuild.slice(index + 1),
+        ],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        betslipBuild: [...formData.betslipBuild, playerProp],
+        betslipSize: (formData.betslipSize += 1),
+      });
+    }
+  };
+
+  console.log(formData.betslipBuild);
+
   return (
     <div className="tile">
-      <input type="checkbox" name="player" id={props.player} />
-      <label htmlFor={props.player}>
+      <input
+        type="checkbox"
+        id={props.id}
+        name="player"
+        onChange={handleCheckbox}
+        checked={props.checked}
+        value={props.data}
+      />
+      <label htmlFor={props.id}>
         <i
           className={`fas ${props.icon}`}
           style={{ color: props.iconColor }}

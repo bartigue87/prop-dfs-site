@@ -1,27 +1,31 @@
+import { useContext } from "react";
 import CategoryNav from "./CategoryNav";
+import { categoryContext } from "./Form";
 
-export default function BasketballNavs(props) {
+export default function BasketballNavs() {
+  const [formData, setFormData] = useContext(categoryContext);
+
   const categoryNav = (
     <div className="category--container">
       <CategoryNav
         category={"Points"}
         value={"Points"}
-        formData={props.formData}
-        setFormData={props.setFormData}
+        formData={formData}
+        setFormData={setFormData}
         name={"category"}
       />
       <CategoryNav
         category={"Rebounds"}
         value={"Rebounds"}
-        formData={props.formData}
-        setFormData={props.setFormData}
+        formData={formData}
+        setFormData={setFormData}
         name={"category"}
       />
       <CategoryNav
         category={"Assists"}
         value={"Assists"}
-        formData={props.formData}
-        setFormData={props.setFormData}
+        formData={formData}
+        setFormData={setFormData}
         name={"category"}
       />
     </div>

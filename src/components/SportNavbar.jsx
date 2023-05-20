@@ -5,33 +5,41 @@ import "./component-styles/SportNav.css";
 
 export default function SportNavbar() {
   const [page, setPage] = useContext(PageContext);
-  const [category, setCategory] = useContext(categoryContext);
-  const [formData, setFormData] = useState({
-    sport: "football",
-  });
+  const [formData, setFormData] = useContext(categoryContext);
+  const [sportMaj, setSportMaj] = useState("football");
   const handleRadio = (event) => {
-    setFormData({
-      [event.target.name]: event.target.value,
-    });
+    setSportMaj(event.target.value);
     handleClick(event.target.value);
   };
 
   const handleClick = (sport) => {
     if (sport === "football") {
       setPage(0);
-      setCategory("Pass Yards");
+      setFormData({
+        ...formData,
+        category: "Pass Yards",
+      });
     } else if (sport === "basketball") {
       setPage(1);
-      setCategory("Points");
+      setFormData({
+        ...formData,
+        category: "Points",
+      });
     } else if (sport === "baseball") {
       setPage(2);
-      setCategory("Strikeouts");
+      setFormData({
+        ...formData,
+        category: "Strikeouts",
+      });
     } else if (sport === "hockey") {
       setPage(3);
-      setCategory("Saves");
+      setFormData({
+        ...formData,
+        category: "Saves",
+      });
     }
   };
-  console.log(category);
+
   return (
     <nav className="nav--container">
       <div className="nav--tile">
@@ -41,7 +49,7 @@ export default function SportNavbar() {
           name="sport"
           id="football"
           value="football"
-          checked={formData.sport === "football"}
+          checked={sportMaj === "football"}
           onChange={handleRadio}
         />
         <label className="nav--label" htmlFor="football">
@@ -56,7 +64,7 @@ export default function SportNavbar() {
           name="sport"
           id="basketball"
           value="basketball"
-          checked={formData.sport === "basketball"}
+          checked={sportMaj === "basketball"}
           onChange={handleRadio}
         />
         <label className="nav--label" htmlFor="basketball">
@@ -71,7 +79,7 @@ export default function SportNavbar() {
           name="sport"
           id="baseball"
           value="baseball"
-          checked={formData.sport === "baseball"}
+          checked={sportMaj === "baseball"}
           onChange={handleRadio}
         />
         <label className="nav--label" htmlFor="baseball">
@@ -86,7 +94,7 @@ export default function SportNavbar() {
           name="sport"
           id="hockey"
           value="hockey"
-          checked={formData.sport === "hoceky"}
+          checked={sportMaj === "hockey"}
           onChange={handleRadio}
         />
         <label className="nav--label" htmlFor="hockey">
