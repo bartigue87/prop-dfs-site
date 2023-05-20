@@ -1,6 +1,6 @@
 .tile {
-  height: 210px;
-  width: 170px;
+  height: 240px;
+  width: 220px;
   position: relative;
 }
 
@@ -67,4 +67,17 @@ label h6 {
   display: flex;
   gap: 10px;
   font-size: 14px;
+}
+
+@media only screen and (max-width: 675px) {
+  .tile {
+    height: 200px;
+    width: 170px;
+  }
+  label {
+    gap: 10px;
+  }
+  .projection {
+    font-size: 13px;
+  }
 }
