@@ -18,7 +18,6 @@ export default function BasketballPlayers(props) {
         icon={"fa-basketball-ball"}
         iconColor={"#ee6730"}
         projection={data.point_projections}
-        value={data}
         data={[data.id, data.name, data.point_projections]}
         checked={formData.betslipBuild.some(
           (bet) => Number(bet.id) === data.id

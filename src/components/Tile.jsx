@@ -10,7 +10,7 @@ export default function Tile(props) {
     const playerProp = {
       id: playerPropDataSplit[0],
       name: playerPropDataSplit[1],
-      projection: playerPropDataSplit[2],
+      projection: `${playerPropDataSplit[2]} ${props.category}`,
     };
     if (formData.betslipBuild.some((data) => data.id === event.target.id)) {
       const index = formData.betslipBuild.findIndex(

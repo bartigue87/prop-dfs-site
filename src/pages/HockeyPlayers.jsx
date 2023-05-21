@@ -1,35 +1,45 @@
 import { useContext, useEffect, useState } from "react";
 import Tile from "../components/Tile";
-import { goalies, skillsPlayers } from "../data/hockey";
+import { goalieSaves, allowedGoals, skillsPlayers } from "../data/hockey";
 import CategoryNav from "../components/CategoryNav";
 import { categoryContext } from "../components/Form";
 
 export default function HockeyPlayers(props) {
   const [formData, setFormData] = useContext(categoryContext);
 
-  const saves = goalies.map((data) => {
+  const saves = goalieSaves.map((data) => {
     return (
       <Tile
-        key={data.name}
+        id={data.id}
+        key={data.id}
         player={data.name}
         team={data.team}
         category={"Saves"}
         icon={"fa-hockey-puck"}
         iconColor={"black"}
         projection={data.saves_projections}
+        data={[data.id, data.name, data.saves_projections]}
+        checked={formData.betslipBuild.some(
+          (bet) => Number(bet.id) === data.id
+        )}
       />
     );
   });
-  const goalsAllowed = goalies.map((data) => {
+  const goalsAllowed = allowedGoals.map((data) => {
     return (
       <Tile
-        key={data.name}
+        id={data.id}
+        key={data.id}
         player={data.name}
         team={data.team}
         category={"Goals Allowed"}
         icon={"fa-hockey-puck"}
         iconColor={"black"}
         projection={data.goals_allowed_projections}
+        data={[data.id, data.name, data.goals_allowed_projections]}
+        checked={formData.betslipBuild.some(
+          (bet) => Number(bet.id) === data.id
+        )}
       />
     );
   });
@@ -37,13 +47,17 @@ export default function HockeyPlayers(props) {
   const shotsOnGoal = skillsPlayers.map((data) => {
     return (
       <Tile
-        key={data.name}
+        key={data.id}
         player={data.name}
         team={data.team}
         category={"Shots On Goal"}
         icon={"fa-hockey-puck"}
         iconColor={"black"}
         projection={data.shots_on_goal_projections}
+        data={[data.id, data.name, data.shots_on_goal_projections]}
+        checked={formData.betslipBuild.some(
+          (bet) => Number(bet.id) === data.id
+        )}
       />
     );
   });
