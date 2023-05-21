@@ -44,4 +44,8 @@ section {
     justify-content: center;
     gap: 12px;
   }
+
+  .form--container {
+    display: block !important;
+  }
 }

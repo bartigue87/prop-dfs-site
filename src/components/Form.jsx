@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 import BasketballPlayers from "../pages/BasketballPlayers";
-import { PageContext } from "../App";
 import BasketballNavs from "./BasketballNavs";
 import FootballPlayers from "../pages/FootballPlayers";
 import FootballNavs from "./FootballNavs";
@@ -9,57 +8,58 @@ import BaseballNavs from "./BaseballNavs";
 import BaseballPlayers from "../pages/BaseballPlayers";
 import HockeyNavs from "./HockeyNavs";
 import HockeyPlayers from "../pages/HockeyPlayers";
+import BetslipBuilder from "./BetslipBuilder";
+import { categoryContext } from "../App";
 
-export const categoryContext = createContext();
+export const PageContext = createContext();
 
 export default function Form() {
-  const [page, setPage] = useContext(PageContext);
-
-  const [formData, setFormData] = useState({
-    betslipSize: 0,
-    category: "Pass Yards",
-    betslipCount: [false, false, false, false, false, false],
-    betslipBuild: [],
-  });
+  const [page, setPage] = useState(0);
+  const [formData] = useContext(categoryContext);
 
   function PageDisplay() {
     if (page === 0) {
       return (
         <>
-          <FootballNavs />
           <FootballPlayers />
         </>
       );
     } else if (page === 1) {
       return (
         <>
-          <BasketballNavs />
           <BasketballPlayers />
         </>
       );
     } else if (page === 2) {
       return (
         <>
-          <BaseballNavs />
           <BaseballPlayers />
         </>
       );
     } else if (page === 3) {
       return (
         <>
-          <HockeyNavs />
           <HockeyPlayers />
         </>
       );
     }
   }
+  console.log(formData.betslipSize);
+
+  const grid =
+    formData.betslipSize === 0
+      ? {
+          display: "block",
+        }
+      : { display: "grid", gridTemplateColumns: "2fr 1fr" };
 
   return (
-    <categoryContext.Provider value={[formData, setFormData]}>
+    <PageContext.Provider value={[page, setPage]}>
       <SportNavbar />
-      <div className="form--container">
+      <div className="form--container" style={grid}>
         <div className="body--container">{PageDisplay()}</div>
+        <BetslipBuilder />
       </div>
-    </categoryContext.Provider>
+    </PageContext.Provider>
   );
 }

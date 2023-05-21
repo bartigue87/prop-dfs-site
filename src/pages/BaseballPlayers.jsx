@@ -2,7 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import Tile from "../components/Tile";
 import { strikeouts, pitchingOuts, earnedRuns } from "../data/baseball";
 import CategoryNav from "../components/CategoryNav";
-import { categoryContext } from "../components/Form";
+import { categoryContext } from "../App";
+import BaseballNavs from "../components/BaseballNavs";
 
 export default function BaseballPlayers(props) {
   const [formData, setFormData] = useContext(categoryContext);

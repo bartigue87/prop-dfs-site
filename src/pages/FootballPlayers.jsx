@@ -10,7 +10,7 @@ import {
   rushingYards,
 } from "../data/football";
 import CategoryNav from "../components/CategoryNav";
-import { categoryContext } from "../components/Form";
+import { categoryContext } from "../App";
 
 export default function FootballPlayers(props) {
   const [formData, setFormData] = useContext(categoryContext);

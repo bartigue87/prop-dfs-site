@@ -2,15 +2,21 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import { createContext, useState } from "react";
 
-export const PageContext = createContext();
+export const categoryContext = createContext();
 
 function App() {
-  const [page, setPage] = useState(0);
+  const [formData, setFormData] = useState({
+    betslipSize: 0,
+    category: "Pass Yards",
+    betslipCount: [false, false, false, false, false, false],
+    betslipBuild: [],
+  });
+
   return (
-    <PageContext.Provider value={[page, setPage]}>
+    <categoryContext.Provider value={[formData, setFormData]}>
       <Header />
       <Form />
-    </PageContext.Provider>
+    </categoryContext.Provider>
   );
 }
 

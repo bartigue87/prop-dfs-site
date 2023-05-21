@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Tile from "../components/Tile";
 import { points, rebounds, assists } from "../data/basketball";
 import CategoryNav from "../components/CategoryNav";
-import { categoryContext } from "../components/Form";
+import { categoryContext } from "../App";
 
 export default function BasketballPlayers(props) {
   const [formData, setFormData] = useContext(categoryContext);

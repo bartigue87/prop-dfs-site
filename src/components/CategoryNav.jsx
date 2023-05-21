@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { categoryContext } from "./Form";
+import { categoryContext } from "../App";
 import "./component-styles/CategoryNav.css";
 
 export default function CategoryNav(props) {

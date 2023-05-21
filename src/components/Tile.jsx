@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./component-styles/Tile.css";
-import { categoryContext } from "./Form";
+import { categoryContext } from "../App";
 
 export default function Tile(props) {
   const [formData, setFormData] = useContext(categoryContext);
@@ -23,6 +23,8 @@ export default function Tile(props) {
           ...formData.betslipBuild.slice(index + 1),
         ],
       });
+    } else if (formData.betslipSize === 6) {
+      alert("6 is the maximum amount of selections allowed.");
     } else {
       setFormData({
         ...formData,

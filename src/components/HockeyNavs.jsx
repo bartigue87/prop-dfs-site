@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CategoryNav from "./CategoryNav";
-import { categoryContext } from "./Form";
+import { categoryContext } from "../App";
 
 export default function HockeyNavs() {
   const [formData, setFormData] = useContext(categoryContext);
