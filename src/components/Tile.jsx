@@ -35,8 +35,6 @@ export default function Tile(props) {
     }
   };
 
-  console.log(formData.betslipBuild);
-
   return (
     <div className="tile">
       <input

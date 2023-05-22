@@ -86,5 +86,26 @@
   position: relative;
 }
 .submit--section {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+.submit--btn {
+  width: 50%;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #e0c64e;
+  outline: none;
+  border: #e0c64e;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.amount--input {
+  height: 30px;
+  width: 40%;
+  margin: 0 auto;
+}
+.submit--btn:hover {
+  transform: scale(1.03);
 }

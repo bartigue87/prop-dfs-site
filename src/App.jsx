@@ -8,9 +8,10 @@ function App() {
   const [formData, setFormData] = useState({
     betslipSize: 0,
     category: "Pass Yards",
-    betslipCount: [false, false, false, false, false, false],
     betslipBuild: [],
   });
+
+  console.log(formData.betslipBuild);
 
   return (
     <categoryContext.Provider value={[formData, setFormData]}>

@@ -44,7 +44,6 @@ export default function Form() {
       );
     }
   }
-  console.log(formData.betslipSize);
 
   const grid =
     formData.betslipSize === 0
