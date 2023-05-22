@@ -1,6 +1,7 @@
 .category--label {
   display: block;
   position: relative;
+  cursor: pointer;
 }
 
 .category--tile {

@@ -22,6 +22,7 @@ export default function Tile(props) {
           ...formData.betslipBuild.slice(0, index),
           ...formData.betslipBuild.slice(index + 1),
         ],
+        betslipSize: (formData.betslipSize -= 1),
       });
     } else if (formData.betslipSize === 6) {
       alert("6 is the maximum amount of selections allowed.");
@@ -46,7 +47,7 @@ export default function Tile(props) {
         checked={props.checked}
         value={props.data}
       />
-      <label htmlFor={props.id}>
+      <label className="tile--label" htmlFor={props.id}>
         <i
           className={`fas ${props.icon}`}
           style={{ color: props.iconColor }}

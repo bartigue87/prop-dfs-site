@@ -30,6 +30,7 @@ input[type="checkbox"]:after {
 
 input[type="checkbox"]:hover {
   transform: scale(1.02);
+  border: #e0ca46 5px solid;
 }
 
 input[type="checkbox"]:checked {
@@ -42,7 +43,7 @@ input[type="checkbox"]:checked:after {
   color: black;
 }
 
-label {
+.tile--label {
   display: flex;
   flex-direction: column;
   align-items: center;

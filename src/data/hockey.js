@@ -142,6 +142,7 @@ const allowedGoals = [
     goals_allowed_projections: 2.5,
   },
 ];
+
 const skillsPlayers = [
   {
     id: 420,

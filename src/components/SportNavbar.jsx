@@ -69,7 +69,7 @@ export default function SportNavbar() {
             checked={sportMaj === "football"}
             onChange={handleRadio}
           />
-          <label className="nav--label" htmlFor="football">
+          <label className="tile--label" htmlFor="football">
             <i className="fas fa-football-ball nav--icon"></i>
             <h6>Football</h6>
           </label>
@@ -84,7 +84,7 @@ export default function SportNavbar() {
             checked={sportMaj === "basketball"}
             onChange={handleRadio}
           />
-          <label className="nav--label" htmlFor="basketball">
+          <label className="tile--label" htmlFor="basketball">
             <i className="fas fa-basketball-ball nav--icon"></i>
             <h6>Basketball</h6>
           </label>
@@ -99,7 +99,7 @@ export default function SportNavbar() {
             checked={sportMaj === "baseball"}
             onChange={handleRadio}
           />
-          <label className="nav--label" htmlFor="baseball">
+          <label className="tile--label" htmlFor="baseball">
             <i className="fas fa-baseball-ball nav--icon"></i>
             <h6>Baseball</h6>
           </label>
@@ -114,7 +114,7 @@ export default function SportNavbar() {
             checked={sportMaj === "hockey"}
             onChange={handleRadio}
           />
-          <label className="nav--label" htmlFor="hockey">
+          <label className="tile--label" htmlFor="hockey">
             <i className="fas fa-hockey-puck nav--icon"></i>
             <h6>Hockey</h6>
           </label>

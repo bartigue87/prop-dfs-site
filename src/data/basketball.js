@@ -194,7 +194,7 @@ const assists = [
     id: 227,
     name: "LeBron James",
     sport: "Basketball",
-    assist_projections: 10.5,
+    assist_projections: 7.5,
     team: "Los Angeles Lakers",
   },
   {

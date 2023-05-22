@@ -1,10 +1,90 @@
-.betslip--container {
-  height: 100vh;
-  width: 300px;
-  background-color: white;
-  color: black;
+.betslip--builder--container {
+  display: flex;
   flex-direction: column;
-  overflow: hidden;
+  color: orange;
+  height: 500px;
   position: relative;
-  top: 100px;
+  border: #e0c64e 3px solid;
+  border-radius: 10px;
+  top: 110px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.betslip--container {
+  display: flex;
+  flex-direction: column;
+  color: orange;
+  height: 300px;
+  position: relative;
+  gap: 10px;
+  overflow: scroll;
+}
+
+.bet--tile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 8px;
+  border: 1px solid orange;
+  border-radius: 10px;
+}
+
+.bet--input--container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  gap: 10px;
+}
+
+.bet--input {
+  display: flex;
+  justify-content: center;
+  -webkit-appearance: none;
+  position: relative;
+  height: 30px;
+  width: 80%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  outline: none;
+  background-color: white;
+}
+
+.bet--over[type="radio"]:after {
+  content: "OVER";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bet--under[type="radio"]:after {
+  content: "UNDER";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bet--input[type="radio"]:hover {
+  transform: scale(1.04);
+  background-color: #e0c64e;
+}
+
+.bet--input[type="radio"]:hover + label {
+  color: black;
+}
+
+.bet--input[type="radio"]:checked {
+  background-color: #e0c64e;
+}
+
+.bet--input[type="radio"]:checked + label {
+  color: black;
+}
+
+.bet--label {
+  position: relative;
+}
+.submit--section {
+  margin: 20px;
 }

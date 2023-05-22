@@ -11,7 +11,7 @@ body {
 }
 
 section {
-  width: 80%;
+  width: 90%;
   margin: 130px auto;
   position: relative;
   display: flex;
@@ -29,6 +29,12 @@ section {
   position: relative;
   align-items: center;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 770px) {
+  .form--container {
+    grid-template-columns: 1.5fr 1fr !important;
+  }
 }
 
 @media only screen and (max-width: 675px) {

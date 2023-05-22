@@ -47,6 +47,7 @@ export default function HockeyPlayers(props) {
   const shotsOnGoal = skillsPlayers.map((data) => {
     return (
       <Tile
+        id={data.id}
         key={data.id}
         player={data.name}
         team={data.team}
