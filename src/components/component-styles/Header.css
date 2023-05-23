@@ -43,6 +43,10 @@ header button {
   background-color: #282a27;
 }
 
+.nav--item {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 675px) {
   .left--header h3 {
     font-size: 26px;

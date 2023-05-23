@@ -1,6 +1,7 @@
-import Header from "./components/Header";
 import Form from "./components/Form";
 import { createContext, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MyEntriesPage from "./pages/MyEntriesPgae";
 
 export const categoryContext = createContext();
 
@@ -12,10 +13,16 @@ function App() {
     myEntries: [],
   });
 
+  let routes = (
+    <Routes>
+      <Route exact path="/" element={<Form />} />
+      <Route path="/entries" element={<MyEntriesPage />} />
+    </Routes>
+  );
+
   return (
     <categoryContext.Provider value={[formData, setFormData]}>
-      <Header />
-      <Form />
+      <Router>{routes}</Router>
     </categoryContext.Provider>
   );
 }

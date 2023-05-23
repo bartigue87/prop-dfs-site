@@ -56,7 +56,6 @@ export default function BetslipBuilder() {
 
   const handleAmountInput = (e) => {
     setAmount(e.target.value);
-    console.log(amount);
   };
   useEffect(() => {
     if (formData.betslipSize === 0) {
@@ -88,9 +87,6 @@ export default function BetslipBuilder() {
     }
   };
 
-  console.log("window.innerWidth:", window.innerWidth);
-  console.log(window.innerWidth < 676);
-
   const clearForm = () => {
     setFormData({
       betslipSize: 0,
@@ -103,8 +99,6 @@ export default function BetslipBuilder() {
     });
     setModalStyle({ display: "flex" });
   };
-
-  console.log("formData.myEntries:", formData.myEntries);
 
   const closeMobileBetslip = () => {
     setDisplay({ display: "none" });

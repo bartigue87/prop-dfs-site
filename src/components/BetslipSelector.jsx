@@ -5,7 +5,6 @@ export default function BetslipSelector(props) {
   const [formData, setFormData] = useContext(categoryContext);
 
   function handleRadio(event) {
-    console.log(event.target.value);
     const playerProp = {
       id: props.id,
       name: props.name,
@@ -42,7 +41,6 @@ export default function BetslipSelector(props) {
     handleDeselection();
   }, [formData.betslipSize]);
 
-  console.log("entry", props.entry);
   return (
     <>
       <div>

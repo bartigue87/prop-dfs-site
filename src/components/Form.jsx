@@ -10,6 +10,7 @@ import HockeyNavs from "./HockeyNavs";
 import HockeyPlayers from "../pages/HockeyPlayers";
 import BetslipBuilder from "./BetslipBuilder";
 import { categoryContext } from "../App";
+import Header from "./Header";
 
 export const PageContext = createContext();
 
@@ -54,6 +55,7 @@ export default function Form() {
 
   return (
     <PageContext.Provider value={[page, setPage]}>
+      <Header active={"board"} />
       <SportNavbar />
       <div className="form--container" style={grid}>
         <div className="body--container">{PageDisplay()}</div>
