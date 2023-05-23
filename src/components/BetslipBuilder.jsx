@@ -11,8 +11,9 @@ export default function BetslipBuilder() {
   const [amount, setAmount] = useState("");
   const [validation, setValidation] = useState("");
   const [buttonState, setButtonState] = useState(true);
-
   const [modalStyle, setModalStyle] = useState({ display: "none" });
+  const [display, setDisplay] = useState({ display: "none" });
+  const [buttonDisplay, setButtonDisplay] = useState({ display: "none" });
 
   function displayBetslipBuilder() {
     if (formData.betslipSize === 0) {
@@ -57,15 +58,16 @@ export default function BetslipBuilder() {
     setAmount(e.target.value);
     console.log(amount);
   };
-
-  const display =
-    formData.betslipSize === 0
-      ? {
-          display: "none",
-        }
-      : {
-          display: "flex",
-        };
+  useEffect(() => {
+    if (formData.betslipSize === 0) {
+      setDisplay({ display: "none" });
+      setButtonDisplay({ display: "none" });
+    } else if (window.innerWidth < 676) {
+      setButtonDisplay({ display: "block" });
+    } else {
+      setDisplay({ display: "flex" });
+    }
+  }, [formData.betslipSize]);
 
   const validator = () => {
     if (amount > 500) {
@@ -86,11 +88,30 @@ export default function BetslipBuilder() {
     }
   };
 
-  console.log(buttonState);
+  console.log("window.innerWidth:", window.innerWidth);
+  console.log(window.innerWidth < 676);
 
   const clearForm = () => {
-    setFormData({ betslipSize: 0, category: "Pass Yards", betslipBuild: [] });
+    setFormData({
+      betslipSize: 0,
+      category: "Pass Yards",
+      betslipBuild: [],
+      myEntries: [
+        ...formData.myEntries,
+        [...entry, amount, amount * multiplyer],
+      ],
+    });
     setModalStyle({ display: "flex" });
+  };
+
+  console.log("formData.myEntries:", formData.myEntries);
+
+  const closeMobileBetslip = () => {
+    setDisplay({ display: "none" });
+  };
+
+  const showSelections = () => {
+    setDisplay({ display: "flex" });
   };
 
   const playerOrPlayers = formData.betslipSize === 1 ? "Player" : "Players";
@@ -135,9 +156,19 @@ export default function BetslipBuilder() {
             >
               Submit
             </button>
+            <button onClick={closeMobileBetslip} className="submit--btn">
+              Return to Board
+            </button>
           </div>
         )}
       </div>
+      <button
+        className="submit--btn mobile--btn"
+        style={buttonDisplay}
+        onClick={showSelections}
+      >
+        Show Betslip
+      </button>
     </>
   );
 }

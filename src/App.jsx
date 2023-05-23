@@ -9,9 +9,8 @@ function App() {
     betslipSize: 0,
     category: "Pass Yards",
     betslipBuild: [],
+    myEntries: [],
   });
-
-  console.log(formData.betslipBuild);
 
   return (
     <categoryContext.Provider value={[formData, setFormData]}>
