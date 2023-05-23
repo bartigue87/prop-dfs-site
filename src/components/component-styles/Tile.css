@@ -78,6 +78,9 @@ label h6 {
   .tile--label {
     gap: 10px;
   }
+  .tile--label h6 {
+    font-size: 13px;
+  }
   .projection {
     font-size: 13px;
   }

@@ -57,6 +57,7 @@ export default function BetslipBuilder() {
   const handleAmountInput = (e) => {
     setAmount(e.target.value);
   };
+
   useEffect(() => {
     if (formData.betslipSize === 0) {
       setDisplay({ display: "none" });
@@ -111,13 +112,14 @@ export default function BetslipBuilder() {
 
   const playerOrPlayers = formData.betslipSize === 1 ? "Player" : "Players";
 
-  console.log(formData.betslipBuild);
-  console.log(entry);
-
   return (
     <>
       <Modal modalStyle={modalStyle} setModalStyle={setModalStyle} />
-      <div className="betslip--builder--container" style={display}>
+      <div
+        className="betslip--builder--container"
+        aria-hidden="true"
+        style={display}
+      >
         <div className="betslip--container" style={display}>
           <h3>
             Current Entry{" "}
@@ -154,7 +156,11 @@ export default function BetslipBuilder() {
             >
               Submit
             </button>
-            <button onClick={closeMobileBetslip} className="submit--btn">
+            <button
+              onClick={closeMobileBetslip}
+              style={buttonDisplay}
+              className="submit--btn"
+            >
               Return to Board
             </button>
           </div>

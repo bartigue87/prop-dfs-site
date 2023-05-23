@@ -50,7 +50,7 @@ export default function Tile(props) {
           className={`fas ${props.icon}`}
           style={{ color: props.iconColor }}
         ></i>
-        <h6>{props.player}</h6>
+        <h4>{props.player}</h4>
         <h5>{props.team}</h5>
         <div className="projection">
           <p>{props.projection}</p> | <p>{props.category}</p>
