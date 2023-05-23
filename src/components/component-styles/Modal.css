@@ -36,3 +36,10 @@
   background-color: #282a27;
   margin: 10px;
 }
+
+@media only screen and (max-width: 675px) {
+  .modal {
+    width: 80%;
+    height: 30%;
+  }
+}

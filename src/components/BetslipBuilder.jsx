@@ -8,7 +8,7 @@ export default function BetslipBuilder() {
   const [entry, setEntry] = useState([]);
   const [formData, setFormData] = useContext(categoryContext);
   const [multiplyer, setMultiplyer] = useState(0);
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState("5");
   const [validation, setValidation] = useState("");
   const [buttonState, setButtonState] = useState(true);
   const [modalStyle, setModalStyle] = useState({ display: "none" });
