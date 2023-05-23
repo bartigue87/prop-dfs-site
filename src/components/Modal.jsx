@@ -1,6 +1,12 @@
+import { useNavigate } from "react-router";
 import "./component-styles/Modal.css";
 
 export default function Modal(props) {
+  const navigate = useNavigate();
+
+  const handleEntriesNav = () => {
+    navigate("/entries");
+  };
   const closeModal = () => {
     props.setModalStyle({ display: "none" });
   };
@@ -9,7 +15,7 @@ export default function Modal(props) {
       <div className="modal">
         <h2>Bet Placed!</h2>
         <div>
-          <button>View Entries</button>
+          <button onClick={handleEntriesNav}>View Entries</button>
           <button onClick={closeModal}>Close</button>
         </div>
       </div>

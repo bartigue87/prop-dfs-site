@@ -74,7 +74,7 @@ export default function BaseballPlayers(props) {
     } else if (formData.category === "ERA") {
       players = earnedRunsAllowed;
     } else {
-      players = strikeouts;
+      players = playerStrikeouts;
     }
     return players;
   }

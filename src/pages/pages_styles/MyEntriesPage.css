@@ -1,0 +1,20 @@
+.entries--container {
+  display: flex;
+  position: relative;
+  top: 80px;
+  width: 85%;
+  margin: 20px auto;
+  flex-direction: column;
+}
+
+.no--entries {
+  position: absolute;
+}
+
+.entry {
+  color: #e0c64e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}

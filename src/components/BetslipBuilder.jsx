@@ -97,6 +97,7 @@ export default function BetslipBuilder() {
         [...entry, amount, amount * multiplyer],
       ],
     });
+    setEntry([]);
     setModalStyle({ display: "flex" });
   };
 
@@ -109,6 +110,9 @@ export default function BetslipBuilder() {
   };
 
   const playerOrPlayers = formData.betslipSize === 1 ? "Player" : "Players";
+
+  console.log(formData.betslipBuild);
+  console.log(entry);
 
   return (
     <>

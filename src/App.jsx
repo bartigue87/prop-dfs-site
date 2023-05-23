@@ -1,7 +1,7 @@
 import Form from "./components/Form";
 import { createContext, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import MyEntriesPage from "./pages/MyEntriesPgae";
+import MyEntriesPage from "./pages/MyEntriesPage";
 
 export const categoryContext = createContext();
 

@@ -5,38 +5,46 @@ import "./pages_styles/MyEntriesPage.css";
 
 export default function MyEntriesPage() {
   const [formData, setFormData] = useContext(categoryContext);
-  console.log("fomrData.myEntries:", formData.myEntries);
   let newArray = [];
 
   formData.myEntries.forEach((nested) => {
-    console.log("nested:", nested);
     let i = 0;
     while (i <= nested.length - 3) {
-      console.log(i);
       newArray.push(
         <div>
-          <h4> {nested[i].name}</h4>
-          <h5>{nested[i].projection}</h5>
-          <h6>{nested[i].selection}</h6>
+          <h3> {nested[i].name}</h3>
+          <h4>{nested[i].projection}</h4>
+          <h5>{nested[i].selection}</h5>
         </div>
       );
       i++;
     }
     newArray.push(
-      <div>
+      <div
+        style={{
+          borderBottom: "1px solid white",
+          paddingBottom: "10px",
+        }}
+      >
         <p>
           ${nested[nested.length - 2]} wagered to win $
-          {nested[nested.length - 1]}{" "}
+          {nested[nested.length - 1]}
         </p>
       </div>
     );
   });
 
-  console.log(newArray);
   return (
     <>
       <Header active={"entries"} />
-      <div>{newArray}</div>
+
+      <div className="entries--container">
+        {newArray.length === 0 ? (
+          <div className="no--entries">No Entries</div>
+        ) : (
+          <div className="entry">{newArray}</div>
+        )}
+      </div>
     </>
   );
 }
