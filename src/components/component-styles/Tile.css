@@ -75,7 +75,7 @@ label h6 {
     height: 200px;
     width: 170px;
   }
-  label {
+  .tile--label {
     gap: 10px;
   }
   .projection {

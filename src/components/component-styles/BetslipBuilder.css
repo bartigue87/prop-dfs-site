@@ -101,6 +101,7 @@
   border: #e0c64e;
   border-radius: 10px;
   cursor: pointer;
+  color: #282a27;
 }
 .amount--input {
   height: 30px;
@@ -131,6 +132,10 @@
     gap: 20px;
     z-index: 10;
     width: 100%;
+  }
+
+  .bet--input {
+    border-radius: 0;
   }
 
   .betslip--container {
