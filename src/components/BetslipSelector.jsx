@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { categoryContext } from "../App";
 
 export default function BetslipSelector(props) {
@@ -12,9 +12,36 @@ export default function BetslipSelector(props) {
       projection: props.projection,
       selection: event.target.value,
     };
-    console.log("playerProp.selection:", playerProp.selection);
-    props.setEntry([...props.entry, playerProp]);
+    if (props.entry.some((data) => data.id === event.target.id)) {
+      const index = props.entry.findIndex((obj) => obj.id === event.target.id);
+      props.setEntry([
+        ...props.entry.slice(0, index),
+        ...props.entry.slice(index + 1),
+        playerProp,
+      ]);
+    } else {
+      props.setEntry([...props.entry, playerProp]);
+    }
   }
+
+  function handleDeselection() {
+    if (props.entry.length > formData.betslipSize) {
+      for (let i = 0; i < formData.betslipSize; i++) {
+        const index = props.entry.findIndex(
+          (obj) => obj.id !== formData.betslipBuild[i].id
+        );
+        props.setEntry([
+          ...props.entry.slice(0, index),
+          ...props.entry.slice(index + 1),
+        ]);
+      }
+    }
+  }
+
+  useEffect(() => {
+    handleDeselection();
+  }, [formData.betslipSize]);
+
   console.log("entry", props.entry);
   return (
     <>

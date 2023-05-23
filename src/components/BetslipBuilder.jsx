@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { categoryContext } from "../App";
+import Modal from "./Modal";
 import "./component-styles/BetslipBuilder.css";
 import BetslipSelector from "./BetslipSelector";
 
@@ -10,6 +11,7 @@ export default function BetslipBuilder() {
   const [amount, setAmount] = useState("");
   const [validation, setValidation] = useState("");
   const [buttonState, setButtonState] = useState(true);
+
   const [modalStyle, setModalStyle] = useState({ display: "none" });
 
   function displayBetslipBuilder() {
@@ -49,7 +51,7 @@ export default function BetslipBuilder() {
 
   useEffect(() => {
     validator();
-  }, [amount]);
+  }, [amount, entry.length, formData.betslipSize]);
 
   const handleAmountInput = (e) => {
     setAmount(e.target.value);
@@ -72,22 +74,30 @@ export default function BetslipBuilder() {
     } else if (amount < 5 || amount === "") {
       setValidation("Minimum amount required is $5");
       setButtonState(true);
+    } else if (
+      entry.length !== formData.betslipSize ||
+      formData.betslipSize === 0
+    ) {
+      setValidation("Must select over or under for each pick");
+      setButtonState(true);
     } else {
       setValidation("");
       setButtonState(false);
     }
   };
 
+  console.log(buttonState);
+
   const clearForm = () => {
     setFormData({ betslipSize: 0, category: "Pass Yards", betslipBuild: [] });
-    setModalStyle({ display: "block" });
+    setModalStyle({ display: "flex" });
   };
 
   const playerOrPlayers = formData.betslipSize === 1 ? "Player" : "Players";
 
   return (
     <>
-      <h1 style={modalStyle}>Success</h1>
+      <Modal modalStyle={modalStyle} setModalStyle={setModalStyle} />
       <div className="betslip--builder--container" style={display}>
         <div className="betslip--container" style={display}>
           <h3>
