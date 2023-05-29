@@ -121,7 +121,7 @@
     display: flex;
     flex-direction: column;
     color: orange;
-    height: 100vh;
+    height: 100dvh;
     background-color: #282a27;
     position: fixed;
     border: 0;
